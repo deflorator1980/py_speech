@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  py:
+    build: .
+    image: edoc18/py
+    ports:
+      - 5000:5000
+    command: python speech_to_flask.py

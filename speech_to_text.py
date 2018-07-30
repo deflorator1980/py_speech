@@ -4,6 +4,6 @@ harvard = sr.AudioFile('hz.wav')
 # harvard = sr.AudioFile('english.wav')
 with harvard as source:
     audio = r.record(source)
-# print(r.recognize_google(audio))
-print(r.recognize_sphinx(audio))
+print(r.recognize_google(audio))
+# print(r.recognize_sphinx(audio))
 
