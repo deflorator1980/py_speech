@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import speech_recognition as sr
 
+
 app = Flask(__name__)
 
 def speech():
@@ -9,7 +10,8 @@ def speech():
     harvard = sr.AudioFile('file.wav')
     with harvard as source:
         audio = r.record(source)
-    return r.recognize_google(audio)
+    # return r.recognize_google(audio)
+    return r.recognize_sphinx(audio)
 
 @app.route('/')
 def upload():
